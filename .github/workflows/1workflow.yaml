@@ -10,4 +10,16 @@ jobs:
             - name: multiline
               run:  |
                 node -v
-                npm -v  
+                npm -v
+    parallen-jobs:
+        runs-on: macos-latest
+        steps:
+            - name: testingmac
+              run: sw_vers
+    dependant-job: 
+        runs-on: windows-latest
+        needs: run-shell-commands
+        steps:
+            - name: echo a string
+              run: Write-output "testing Windows"  
+                     
