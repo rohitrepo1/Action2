@@ -36,6 +36,9 @@ jobs:
                echo $env:GITHUB_REPOSITORY
                echo $env:GITHUB_WORKSPACE               
             - name: Python shell #change to pythonshell
-              run: python -c "import sys; print(sys.version)"
+              shell: python
+              run: |
+                import platform
+                print(platform.processor())
 
 
