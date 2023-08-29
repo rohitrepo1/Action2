@@ -1,0 +1,36 @@
+name: 9workflow-repo-event
+on: 
+    push:
+        branches:
+             - master
+             - feature/* # matches feature/featA, feature/featB, does not match feature/featA/featB
+             - feature/** #matches feature/featA, feature/featB, feature/featA/featB
+             - "!feature/featA" #ignore
+        #branches-ignore:
+       #     - feature/featA       
+        tags:
+         - v1.* # match v1.1, v1.1.2
+         - "!v1.1.1"   
+        # Filter pattern cheat sheet - https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#filter-pattern-cheat-sheet
+        paths: 
+         - "**.js"
+         - "!app.js"
+    pull_request: 
+        types: [opened, assigned, reopened]
+        branches: 
+          - master
+        paths:
+            - "**.js"
+    issues:
+        types: [opened]  
+ 
+jobs:  
+   checkout-test:
+     runs-on: ubuntu-latest
+     steps:
+        - run: |
+              echo $GITHUB_SHA
+              echo $GITHUB_REF
+        - uses: actions/checkout@v3      
+
+
