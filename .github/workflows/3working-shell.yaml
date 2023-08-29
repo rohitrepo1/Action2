@@ -16,7 +16,7 @@ jobs:
                echo $GITHUB_REPOSITORY
                echo $GITHUB_WORKSPACE
             - name: Change Working dir
-              working-directory: /home/runner
+              working-directory: /home/runner #change working dir 
               run: |
                pwd
                ls -lrt
@@ -26,7 +26,7 @@ jobs:
         runs-on: windows-latest
         defaults:
             run:
-                shell: pwsh
+                shell: pwsh #powershell
         steps:
             - name:  DIsplay the Working directory details and files
               run: |
@@ -35,7 +35,7 @@ jobs:
                echo $env:GITHUB_SHA
                echo $env:GITHUB_REPOSITORY
                echo $env:GITHUB_WORKSPACE               
-            - name: Python shell
+            - name: Python shell #change to pythonshell
               run: |
                print ("hello Git")
 
