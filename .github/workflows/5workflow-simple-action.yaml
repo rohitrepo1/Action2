@@ -1,4 +1,4 @@
-name: test Action
+name: 5workflow test Action
 on: [push]
 
 jobs:

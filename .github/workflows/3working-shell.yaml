@@ -1,4 +1,4 @@
-name: Working Dirs and Shell
+name: 3workflow Working Dirs and Shell
 on: [push]
 defaults:
     run:

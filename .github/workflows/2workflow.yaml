@@ -1,4 +1,4 @@
-name: 2workflow-testing
+name: 2workflow
 on: [push]
 
 
