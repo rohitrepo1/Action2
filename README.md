@@ -9,3 +9,5 @@ https://github.com/actions/hello-world-javascript-action
 https://github.com/marketplace?type=actions
 
 https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows 
+
+https://docs.github.com/en/actions/managing-workflow-runs/approving-workflow-runs-from-public-forks
