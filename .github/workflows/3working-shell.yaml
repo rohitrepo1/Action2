@@ -38,8 +38,9 @@ jobs:
             - name: Python shell #change to pythonshell
               shell: python
               run: |
-                python -c "import sys; print(sys.version)"
                 import os
+                import sys
+                print(sys.version)
                 print(os.enviro['PATH'])
 
 
