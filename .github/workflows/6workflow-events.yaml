@@ -1,4 +1,4 @@
-name: Repository Events
+name: 6workflow Repository Events
 on: [push, pull_request, issues]
 
 jobs:
