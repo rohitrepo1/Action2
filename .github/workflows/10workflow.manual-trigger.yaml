@@ -1,4 +1,5 @@
 #https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch
+#https://cli.github.com/manual/gh_workflow_run
 name: 10workflow-manual-trigger
 on:
     workflow_dispatch: 

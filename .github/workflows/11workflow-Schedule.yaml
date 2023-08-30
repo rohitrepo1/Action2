@@ -1,0 +1,17 @@
+name: Schedule Issues and PR to Stale
+on:
+    schedule:
+        - cron: "1 * * * *"
+        - cron: "0/5 * * * *"
+
+jobs:
+    stale:
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/stale@v8
+            with:
+                stale-issue-message: "Removed the inactive  PR"
+                days-before-stale: 1
+                days-before-close: 5
+
+
