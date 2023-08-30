@@ -1,0 +1,40 @@
+#https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch
+name: 10workflow-manual-trigger
+on:
+    workflow_dispatch: 
+        inputs:
+            string:
+                description: A String Input 
+                type: string
+                required: true
+                default: "Reason for running the workflow"
+            number:
+                description: Please Neter the CR number 
+                type: number
+                default: 44444
+            option:
+                description: "Completed tessting in QA "
+                required: true
+                default: ""
+                type: choice
+                options:
+                    - OPTION-YES
+                    - OPTION-NO
+                    - OPTION-IN-PROGRESS
+            boolean:
+                description: Approval Taken
+                type: boolean
+                required: true
+
+
+jobs:
+    log-info:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo $GITHUB_REF
+            - run: |
+                echo "String: ${{ inputs.string }}"
+                echo "Number: ${{ inputs.number }}"
+                echo "Option: ${{ inputs.option }}"
+                echo "Boolean: ${{ inputs.boolean }}"
+               
